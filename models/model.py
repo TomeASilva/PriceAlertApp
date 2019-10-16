@@ -16,8 +16,10 @@ class Model(metaclass=ABCMeta):
     def json(self) -> Dict:
         raise NotImplementedError
 
+    # def save_to_database(self) -> None:
+    #     Database.update(self.collection, {"_id": self._id}, self.json())
     def save_to_database(self) -> None:
-        Database.update(self.collection, {"_id": self._id}, self.json())
+        Database.insert(self.collection, self.json())
 
     def remove_from_database(self) -> None:
         Database.remove(self.collection, {"_id": self._id})
