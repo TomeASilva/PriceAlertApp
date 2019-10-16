@@ -4,7 +4,7 @@ from typing import Dict
 
 
 class Database:
-    URI = "mongodb://127.0.0.1:27017/pricing"
+    URI = os.environ.get("MONGODB_URI")
     DATABASE = pymongo.MongoClient(URI).get_database()
 
     @staticmethod
