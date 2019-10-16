@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+    <h1>Create Alert</h1>
+</header>
+<section class="create-alert-form">
+    <form method="post">
+        <div class="form-group">
+            <label for="alert_name"> Alert Name</label>
+            <input type="text" class="form-control" id="alert_name" name="alert_name" placeholder="Ipad 10 inches">
+        </div>
+        <div class="form-group">
+            <label for="item_url">Item URL</label>
+            <input type="text" class="form-control" id="item_url" name="item_url"
+                placeholder="https://www.fnac.pt/macpro/12inc....">
+
+        </div>
+        <div class="form-group">
+            <label for="price_limit">Price limit</label>
+            <input type="text" class="form-control" id="price_limit" name="price_limit" placeholder="1000"
+                aria-describedby="priceLimiHelp">
+            <small id="priceLimitHelp" class="form-text text-muted">
+                What is the price your product has to reach for you to be notified
+
+            </small>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+
+    </form>
+</section>
+{% endblock %}
