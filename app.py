@@ -6,7 +6,7 @@ from views.stores import store_blueprint
 from views.alerts import alerts_blueprint
 from views.user import user_blueprint
 from libs.mailgun import Mailgun
-from dotenv import load_dotenv
+
 
 
 app = Flask(__name__)
